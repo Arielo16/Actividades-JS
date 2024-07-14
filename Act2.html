@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificación de Nota</title>
+    <script>
+
+        function calificarNota() {
+            let nota = prompt("Por favor, ingresa tu nota (0-10):");
+
+            nota = parseInt(nota);
+
+            let calificacion;
+            if (nota >= 0 && nota <= 3) {
+                calificacion = "Muy Deficiente";
+            } else if (nota == 4 || nota == 5) {
+                calificacion = "Insuficiente";
+            } else if (nota == 6) {
+                calificacion = "Suficiente";
+            } else if (nota == 7) {
+                calificacion = "Bien";
+            } else if (nota == 8) {
+                calificacion = "Notable";
+            } else if (nota == 9 || nota == 10) {
+                calificacion = "Sobresaliente";
+            } else {
+                calificacion = "Nota inválida. Por favor, ingresa un número entre 0 y 10.";
+            }
+
+            alert("Tu calificación es: " + calificacion);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calificación de Nota</h1>
+    <button onclick="calificarNota()">Ingresar Nota</button>
+</body>
+</html>
